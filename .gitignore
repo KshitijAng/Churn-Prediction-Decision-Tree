@@ -1,0 +1,51 @@
+# ─── Python ──────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# ─── Virtual environments ────────────────────────────
+venv/
+.venv/
+env/
+ENV/
+
+# ─── Jupyter ─────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ─── Model artifacts ─────────────────────────────────
+# Note: decision_tree.onnx + feature_columns.json are tracked deliberately
+# so the FastAPI service can run on a fresh clone without running train.py first.
+*.pkl
+*.joblib
+*.h5
+
+# ─── OS junk ─────────────────────────────────────────
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ─── Editors / IDE ───────────────────────────────────
+.idea/
+.vscode/
+*.iml
+*.swp
+*.swo
+*~
+
+# ─── Secrets / env ───────────────────────────────────
+.env
+.env.local
+*.local
+secrets.json
+
+# ─── Logs ────────────────────────────────────────────
+*.log
+
+# ─── Build / dist ────────────────────────────────────
+build/
+dist/
+*.egg-info/
