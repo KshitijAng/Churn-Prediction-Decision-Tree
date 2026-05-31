@@ -46,14 +46,13 @@ dataset.csv (10,000 rows, 79.6% / 20.4% class imbalance)
         │  4 features: Age, NumOfProducts, Balance, BalancePerProduct│
         │  DecisionTreeClassifier(max_depth=5)                       │
         │  No class weighting                                        │
-        │                                                             │
+        │                                                            │
         └─────── Full model ─────────────────────────────────────────┤
            12 features (one-hot encoded Geography + Gender)          │
-           class_weight='balanced'                                    │
+           class_weight='balanced'                                   │
            GridSearchCV over max_depth ∈ {3, 5, 7, 9, 11, None}      │
-           5-fold CV, scoring='f1'                                    │
-                                                                      │
-        ┌─────────────────────────────────────────────────────────────┘
+           5-fold CV, scoring='f1'                                   │
+        ┌────────────────────────────────────────────────────────────┘
         │
         ▼
   skl2onnx.convert_sklearn → decision_tree.onnx (12-feature input)
